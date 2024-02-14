@@ -17,7 +17,10 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
 
-
+        //Number list
+        val numbers = Array(100) { (it + 1).toString() }
         //Step 4: Provide a RecyclerView.Adapter
+        recyclerView.adapter = NumberDisplayAdapter(numbers)
+
     }
 }
